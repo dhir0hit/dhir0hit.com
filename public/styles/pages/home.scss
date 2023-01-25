@@ -10,8 +10,8 @@
     //z-index: 1;
     &:not(#home) {
       padding-block: 10rem;
-      padding-inline: 5rem;
-
+      padding-inline: 15rem;
+      //max-width: 1000px;
       h1 {
         font-size: 4rem;
       }
@@ -22,13 +22,14 @@
           font-size: 1.4rem;
           color: rgba(255, 255, 255, 0.55);
         }
-
         ul {
           display: flex;
           flex-direction: row;
           justify-content: space-between;
           flex-wrap: wrap;
           width: 100%;
+          padding-block: 0.5rem;
+
           li {
             width: 40%;
             padding-block: 0.3rem;
@@ -42,7 +43,6 @@
             }
           }
         }
-
       }
     }
   }
@@ -152,6 +152,88 @@
   #about-me {
     div {
       width: 60%;
+
+
+    }
+  }
+
+  #projects {
+    .carousel {
+	  display: flex;
+      flex-direction: row;
+	  justify-content: space-between;
+
+      .info {
+        a {
+          font-size: 1.2rem;
+        }
+        p {
+          padding-block: 0.2rem;
+          margin: 0;
+        }
+      }
+      .nav {
+        display: flex;
+        flex-direction: column;
+
+        label {
+          cursor: pointer;
+          background: none;
+          color: theme.$text;
+          display: flex;
+          flex-direction: row;
+          justify-content: end;
+          box-sizing: border-box;
+
+          font-family: 'Bubbler One', sans-serif;
+          text-align: end;
+          padding: 0;
+          margin: 0;
+
+          input {
+            opacity: 0;
+
+            &:checked + li {
+              border-right: 2px solid theme.$highlight;
+            }
+          }
+          li {
+            list-style-type: none;
+            font-size: 1.5rem;
+            padding: 1rem;
+            margin: 0;
+            border-right: 2px solid #C2742434;
+            transition: border-right-color 0.2s linear;
+          }
+        }
+      }
+    }
+  }
+
+  #playground, #contact {
+    div {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .controls {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        button {
+          padding-block: 0.5rem;
+          padding-inline: 3rem;
+          font-size: 3rem;
+        }
+      }
     }
   }
 }
+
+
+
+
+
+

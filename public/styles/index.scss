@@ -2,6 +2,19 @@
 @use 'theme';
 @use 'navigation';
 
+
+@keyframes bubble {
+ 0% {
+    transform: translate(0);
+  }
+  50% {
+    transform: translate(10px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
 #button {
   outline: theme.$highlight;
   background-color: #C2742434;
@@ -50,8 +63,22 @@
   p {
     font-family: "Open Sans", sans-serif;
   }
-  li {
+  li, button{
     font-family: 'Bubbler One', sans-serif;
+  }
+  button {
+    cursor: pointer;
+    border: none;
+    background: rgba(194, 116, 36, 0.41);
+    outline: 2px solid theme.$highlight;
+    color: theme.$text;
+    &:hover{
+      background: theme.$highlightFade;
+    }
+  }
+  a {
+    color: theme.$text;
+    font-family: "Open Sans", sans-serif;
   }
 }
 
@@ -67,3 +94,29 @@ body {
   }
 }
 
+.showScroll {
+  div {
+    position: fixed;
+    bottom: 0;
+    button {
+      background: none;
+      outline: none;
+      letter-spacing: 10px;
+      animation: bubble 1s ease-in-out infinite;
+      &:hover {
+        background: none;
+      }
+    }
+
+
+    &:nth-child(1) {
+      left: 0;
+      transform: rotate(-90deg) translate(50%);
+    }
+    &:nth-child(2) {
+      padding-right: 1rem;
+      transform: rotate(90deg) translate(-50%);
+      right: 0;
+    }
+  }
+}

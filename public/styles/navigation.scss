@@ -1,29 +1,31 @@
 @use 'theme';
 
+$navButtonBlur: 15px;
+
 @keyframes lightBulb {
   0% {
-    text-shadow: 0 0 7px theme.$highlight;
+    text-shadow: 0 0 $navButtonBlur theme.$highlight;
   }
   2% {
-    text-shadow: 0 0 7px transparent;
+    text-shadow: 0 0 $navButtonBlur transparent;
   }
   6% {
-    text-shadow: 0 0 7px theme.$highlight;
+    text-shadow: 0 0 $navButtonBlur theme.$highlight;
   }
   10% {
-    text-shadow: 0 0 7px transparent;
+    text-shadow: 0 0 $navButtonBlur transparent;
   }
   30% {
-    text-shadow: 0 0 7px theme.$highlight;
+    text-shadow: 0 0 $navButtonBlur theme.$highlight;
   }
   50% {
-    text-shadow: 0 0 7px transparent;
+    text-shadow: 0 0 $navButtonBlur transparent;
   }
   55% {
-    text-shadow: 0 0 7px theme.$highlight;
+    text-shadow: 0 0 $navButtonBlur theme.$highlight;
   }
   100% {
-    text-shadow: 0 0 7px theme.$highlight;
+    text-shadow: 0 0 $navButtonBlur theme.$highlight;
   }
 }
 
@@ -32,7 +34,8 @@ button.hamburger {
   width: 60px;
   height: 40px;
 
-  background-color: transparent;
+  background: transparent !important;
+  outline: none !important;
   border: none;
 
   display: flex;
@@ -107,12 +110,12 @@ nav {
       text-decoration: none;
       h1 {
         color: theme.$highlightFade;
-        animation: linear 2s  1s lightBulb;
+        animation: linear 2s  2s lightBulb;
       }
 
       &:hover {
         h1 {
-          text-shadow: 0 0 5px theme.$highlight;
+          text-shadow: 0 0 $navButtonBlur theme.$highlight;
         }
       }
     }

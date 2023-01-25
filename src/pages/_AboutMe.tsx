@@ -1,5 +1,5 @@
 
-const AboutMe = () => {
+const _AboutMe = () => {
     return <div id={"about-me"} className={"container"}>
         <h1>About Me</h1>
         <div>
@@ -26,4 +26,4 @@ const AboutMe = () => {
     </div>
 }
 
-export default AboutMe;
+export default _AboutMe;

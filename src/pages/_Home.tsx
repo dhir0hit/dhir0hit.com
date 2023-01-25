@@ -1,16 +1,16 @@
 import banner from "/media/dhir0hit.svg";
 
-const Home = () => {
+const _Home = () => {
   return <div id={"home"} className={"container"}>
       {/*Scroll Button*/}
-      <a
+      {/*<a
           href={'#about-me'}
           className={'scroll'}
       >
           <div>
               <span>&larr;</span>
           </div>
-      </a>
+      </a>*/}
 
       {/*BACKGROUND*/}
       <div className={"background_image"}>
@@ -30,4 +30,4 @@ const Home = () => {
   </div>
 }
 
-export default Home;
+export default _Home;

@@ -7,7 +7,7 @@
 }
 .main.container .container:not(#home) {
   padding-block: 10rem;
-  padding-inline: 5rem;
+  padding-inline: 15rem;
 }
 .main.container .container:not(#home) h1 {
   font-size: 4rem;
@@ -25,6 +25,7 @@
   justify-content: space-between;
   flex-wrap: wrap;
   width: 100%;
+  padding-block: 0.5rem;
 }
 .main.container .container:not(#home) div ul li {
   width: 40%;
@@ -124,37 +125,98 @@
 .main.container #about-me div {
   width: 60%;
 }
+.main.container #projects .carousel {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.main.container #projects .carousel .info a {
+  font-size: 1.2rem;
+}
+.main.container #projects .carousel .info p {
+  padding-block: 0.2rem;
+  margin: 0;
+}
+.main.container #projects .carousel .nav {
+  display: flex;
+  flex-direction: column;
+}
+.main.container #projects .carousel .nav label {
+  cursor: pointer;
+  background: none;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  box-sizing: border-box;
+  font-family: "Bubbler One", sans-serif;
+  text-align: end;
+  padding: 0;
+  margin: 0;
+}
+.main.container #projects .carousel .nav label input {
+  opacity: 0;
+}
+.main.container #projects .carousel .nav label input:checked + li {
+  border-right: 2px solid #C27424;
+}
+.main.container #projects .carousel .nav label li {
+  list-style-type: none;
+  font-size: 1.5rem;
+  padding: 1rem;
+  margin: 0;
+  border-right: 2px solid rgba(194, 116, 36, 0.2039215686);
+  transition: border-right-color 0.2s linear;
+}
+.main.container #playground div, .main.container #contact div {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.main.container #playground div .controls, .main.container #contact div .controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.main.container #playground div .controls button, .main.container #contact div .controls button {
+  padding-block: 0.5rem;
+  padding-inline: 3rem;
+  font-size: 3rem;
+}
 
 @keyframes lightBulb {
   0% {
-    text-shadow: 0 0 7px #C27424;
+    text-shadow: 0 0 15px #C27424;
   }
   2% {
-    text-shadow: 0 0 7px transparent;
+    text-shadow: 0 0 15px transparent;
   }
   6% {
-    text-shadow: 0 0 7px #C27424;
+    text-shadow: 0 0 15px #C27424;
   }
   10% {
-    text-shadow: 0 0 7px transparent;
+    text-shadow: 0 0 15px transparent;
   }
   30% {
-    text-shadow: 0 0 7px #C27424;
+    text-shadow: 0 0 15px #C27424;
   }
   50% {
-    text-shadow: 0 0 7px transparent;
+    text-shadow: 0 0 15px transparent;
   }
   55% {
-    text-shadow: 0 0 7px #C27424;
+    text-shadow: 0 0 15px #C27424;
   }
   100% {
-    text-shadow: 0 0 7px #C27424;
+    text-shadow: 0 0 15px #C27424;
   }
 }
 button.hamburger {
   width: 60px;
   height: 40px;
-  background-color: transparent;
+  background: transparent !important;
+  outline: none !important;
   border: none;
   display: flex;
   flex-direction: column;
@@ -222,10 +284,10 @@ nav div .resume {
 }
 nav div .resume h1 {
   color: rgba(194, 116, 36, 0.66);
-  animation: linear 2s 1s lightBulb;
+  animation: linear 2s 2s lightBulb;
 }
 nav div .resume:hover h1 {
-  text-shadow: 0 0 5px #C27424;
+  text-shadow: 0 0 15px #C27424;
 }
 
 .sideBar {
@@ -306,6 +368,17 @@ nav div .resume:hover h1 {
   left: 0 !important;
 }
 
+@keyframes bubble {
+  0% {
+    transform: translate(0);
+  }
+  50% {
+    transform: translate(10px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
 #button {
   outline: #C27424;
   background-color: rgba(194, 116, 36, 0.2039215686);
@@ -347,8 +420,22 @@ nav div .resume:hover h1 {
 :root p {
   font-family: "Open Sans", sans-serif;
 }
-:root li {
+:root li, :root button {
   font-family: "Bubbler One", sans-serif;
+}
+:root button {
+  cursor: pointer;
+  border: none;
+  background: rgba(194, 116, 36, 0.41);
+  outline: 2px solid #C27424;
+  color: #FFFFFF;
+}
+:root button:hover {
+  background: rgba(194, 116, 36, 0.66);
+}
+:root a {
+  color: #FFFFFF;
+  font-family: "Open Sans", sans-serif;
 }
 
 body {
@@ -359,6 +446,29 @@ body {
 body #root {
   max-width: 1800px;
   width: 100%;
+}
+
+.showScroll div {
+  position: fixed;
+  bottom: 0;
+}
+.showScroll div button {
+  background: none;
+  outline: none;
+  letter-spacing: 10px;
+  animation: bubble 1s ease-in-out infinite;
+}
+.showScroll div button:hover {
+  background: none;
+}
+.showScroll div:nth-child(1) {
+  left: 0;
+  transform: rotate(-90deg) translate(50%);
+}
+.showScroll div:nth-child(2) {
+  padding-right: 1rem;
+  transform: rotate(90deg) translate(-50%);
+  right: 0;
 }
 
 /*# sourceMappingURL=index.css.map */

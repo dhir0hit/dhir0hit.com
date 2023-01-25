@@ -1,6 +1,6 @@
 import {useState} from "react";
 import {LinkedinFilled, TwitterOutlined, GithubOutlined, MailFilled} from '@ant-design/icons'
-
+import {Link} from "react-router-dom";
 function NavigationBar() {
     const [isShow, setShow] = useState(false);
 
@@ -28,32 +28,32 @@ function NavigationBar() {
 
             <div className={`sideBar ${isShow ? 'active':''}`}>
                 <ul>
-                    <li><a href="">
+                    <li><Link to="/">
                         <h2>01</h2><h2>//&nbsp;home</h2>
-                    </a></li>
-                    <li><a href="">
+                    </Link></li>
+                    <li><a href="#projects">
                         <h2>02</h2><h2>//&nbsp;projects</h2>
                     </a></li>
-                    <li><a href="">
+                    <li><Link to="/playground">
                         <h2>03</h2><h2>//&nbsp;playground</h2>
-                    </a></li>
-                    <li><a href="">
+                    </Link></li>
+                    <li><Link to="/contact">
                         <h2>04</h2><h2>//&nbsp;contact</h2>
-                    </a></li>
+                    </Link></li>
                 </ul>
 
                 <div className={'contact-icons'}>
                     <div>
-                    <a>
+                    <a href={"https://linkedin.com/in/dhir0hit"} target={"_blank"}>
                         <LinkedinFilled />
                     </a>
-                    <a>
+                    <a href={"https://twitter.com/dhir0hit"} target={"_blank"}>
                         <TwitterOutlined />
                     </a>
-                    <a>
+                    <a href={"https://github.com/dhir0hit"} target={"_blank"}>
                         <GithubOutlined />
                     </a>
-                    <a>
+                    <a href={"mailto:dhir0hit.com"} target={"_blank"}>
                         <MailFilled />
                     </a>
                     </div>
