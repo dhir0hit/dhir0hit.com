@@ -1,7 +1,8 @@
-@use 'pages/home';
 @use 'theme';
 @use 'navigation';
-
+@use 'pages/home';
+@use 'pages/contact';
+@use 'pages/error';
 
 @keyframes bubble {
  0% {
@@ -80,6 +81,13 @@
     color: theme.$text;
     font-family: "Open Sans", sans-serif;
   }
+  .error {
+    color: darkred;
+    font-weight: 600;
+  }
+  .log {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
 }
 
 body {
@@ -87,6 +95,8 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin: 0;
+  padding: 0;
 
   #root {
     max-width: 1800px;
@@ -120,3 +130,20 @@ body {
     }
   }
 }
+
+@media screen and (max-width: 1000px) {
+  .showScroll div {
+    &:nth-child(1) {
+      left: -5rem;
+    }
+    &:nth-child(2) {
+      right: -5rem;
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  h1.background_text {
+    display: none;
+  }
+}
+

@@ -5,7 +5,7 @@ const _Contact = () => {
           <p>For Hiring or other concerns you can mail me directly</p>
 
           <div className={"controls"}>
-              <button type={"button"}>Contact</button>
+              <a href={"/contact"}>Contact</a>
           </div>
       </div>
       <h1 className={"background_text"}>Contact</h1>

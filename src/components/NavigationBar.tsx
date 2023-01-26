@@ -28,16 +28,16 @@ function NavigationBar() {
 
             <div className={`sideBar ${isShow ? 'active':''}`}>
                 <ul>
-                    <li><Link to="/">
+                    <li onClick={() => {setShow(false)}}><Link to="/">
                         <h2>01</h2><h2>//&nbsp;home</h2>
                     </Link></li>
-                    <li><a href="#projects">
+                    <li onClick={() => {setShow(false)}}><a href="/#projects">
                         <h2>02</h2><h2>//&nbsp;projects</h2>
                     </a></li>
-                    <li><Link to="/playground">
+                    <li onClick={() => {setShow(false)}}><Link to="/playground">
                         <h2>03</h2><h2>//&nbsp;playground</h2>
                     </Link></li>
-                    <li><Link to="/contact">
+                    <li onClick={() => {setShow(false)}}><Link to="/contact">
                         <h2>04</h2><h2>//&nbsp;contact</h2>
                     </Link></li>
                 </ul>

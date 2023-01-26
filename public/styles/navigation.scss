@@ -241,3 +241,19 @@ nav {
 .sideBar.active {
   left: 0!important;
 }
+
+
+@media screen and (max-width: 1000px) {
+  nav {
+    padding-inline: 2rem;
+  }
+  .sideBar {
+    width: 100vw;
+    left: -120vw;
+
+    ul {
+      padding-right: 4rem;
+    }
+  }
+}
+

@@ -1,191 +1,4 @@
 @charset "UTF-8";
-.main.container .container {
-  box-sizing: border-box;
-  position: relative;
-  height: 100vh;
-  padding-top: 6rem;
-}
-.main.container .container:not(#home) {
-  padding-block: 10rem;
-  padding-inline: 15rem;
-}
-.main.container .container:not(#home) h1 {
-  font-size: 4rem;
-}
-.main.container .container:not(#home) div {
-  padding-inline: 1rem;
-}
-.main.container .container:not(#home) div p, .main.container .container:not(#home) div ul li {
-  font-size: 1.4rem;
-  color: rgba(255, 255, 255, 0.55);
-}
-.main.container .container:not(#home) div ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  width: 100%;
-  padding-block: 0.5rem;
-}
-.main.container .container:not(#home) div ul li {
-  width: 40%;
-  padding-block: 0.3rem;
-  font-size: 1.5rem;
-  list-style-type: none;
-}
-.main.container .container:not(#home) div ul li::before {
-  content: "⮚";
-  padding-right: 5px;
-  color: rgba(194, 116, 36, 0.66);
-}
-.main.container #home {
-  position: relative;
-}
-.main.container #home .foreground {
-  box-sizing: content-box;
-  height: 90%;
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-around;
-  align-items: center;
-}
-.main.container #home .foreground div {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-end;
-  gap: 0.5rem;
-  height: 100%;
-}
-.main.container #home .foreground div:nth-child(1) {
-  margin-bottom: -15rem;
-}
-.main.container #home .foreground div:nth-child(2) {
-  margin-top: -25rem;
-  justify-content: flex-end;
-  align-items: flex-start;
-}
-.main.container #home .foreground div h1 {
-  padding: 0;
-  margin: 0;
-  font-size: 2rem;
-}
-.main.container #home .foreground div h1 span {
-  color: rgba(194, 116, 36, 0.66);
-}
-.main.container #home .background_image {
-  position: absolute;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin-bottom: 10rem;
-  object-fit: contain;
-  z-index: -1;
-}
-.main.container #home .background_image div {
-  width: 60vw;
-  height: 60vh;
-  background: radial-gradient(rgba(255, 255, 255, 0) 20%, #13141D, #13141D);
-  position: absolute;
-}
-.main.container #home .background_image img {
-  width: 60vw;
-  height: 60vh;
-}
-.main.container #home .scroll {
-  cursor: pointer;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  transform: translateY(-4rem) rotate(-90deg);
-  text-decoration: none;
-}
-.main.container #home .scroll div {
-  border: 1px solid #C27424;
-  padding-bottom: 1.4rem;
-  padding-inline: 1.4rem;
-  border-radius: 40%;
-}
-.main.container #home .scroll div span {
-  color: #C27424;
-  font-size: 4rem;
-  text-align: center;
-}
-.main.container #about-me div {
-  width: 60%;
-}
-.main.container #projects .carousel {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.main.container #projects .carousel .info a {
-  font-size: 1.2rem;
-}
-.main.container #projects .carousel .info p {
-  padding-block: 0.2rem;
-  margin: 0;
-}
-.main.container #projects .carousel .nav {
-  display: flex;
-  flex-direction: column;
-}
-.main.container #projects .carousel .nav label {
-  cursor: pointer;
-  background: none;
-  color: #FFFFFF;
-  display: flex;
-  flex-direction: row;
-  justify-content: end;
-  box-sizing: border-box;
-  font-family: "Bubbler One", sans-serif;
-  text-align: end;
-  padding: 0;
-  margin: 0;
-}
-.main.container #projects .carousel .nav label input {
-  opacity: 0;
-}
-.main.container #projects .carousel .nav label input:checked + li {
-  border-right: 2px solid #C27424;
-}
-.main.container #projects .carousel .nav label li {
-  list-style-type: none;
-  font-size: 1.5rem;
-  padding: 1rem;
-  margin: 0;
-  border-right: 2px solid rgba(194, 116, 36, 0.2039215686);
-  transition: border-right-color 0.2s linear;
-}
-.main.container #playground div, .main.container #contact div {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.main.container #playground div .controls, .main.container #contact div .controls {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-.main.container #playground div .controls button, .main.container #contact div .controls button {
-  padding-block: 0.5rem;
-  padding-inline: 3rem;
-  font-size: 3rem;
-}
-
 @keyframes lightBulb {
   0% {
     text-shadow: 0 0 15px #C27424;
@@ -326,7 +139,7 @@ nav div .resume:hover h1 {
   text-decoration: none;
 }
 .sideBar ul li a h2 {
-  color: #FFFFFF;
+  color: rgba(255, 255, 255, 0.76);
   overflow: visible;
   font-weight: 300;
   padding: 0;
@@ -368,6 +181,365 @@ nav div .resume:hover h1 {
   left: 0 !important;
 }
 
+@media screen and (max-width: 1000px) {
+  nav {
+    padding-inline: 2rem;
+  }
+  .sideBar {
+    width: 100vw;
+    left: -120vw;
+  }
+  .sideBar ul {
+    padding-right: 4rem;
+  }
+}
+.main.container .container {
+  box-sizing: border-box;
+  position: relative;
+  height: 100vh;
+  padding-top: 6rem;
+}
+.main.container .container:not(#home) {
+  padding-block: 10rem;
+  padding-inline: 15rem;
+}
+.main.container .container:not(#home) h1 {
+  font-size: 4rem;
+}
+.main.container .container:not(#home) div {
+  padding-inline: 1rem;
+}
+.main.container .container:not(#home) div p, .main.container .container:not(#home) div ul li {
+  font-size: 1.4rem;
+  color: rgba(255, 255, 255, 0.55);
+}
+.main.container .container:not(#home) div ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-block: 0.5rem;
+}
+.main.container .container:not(#home) div ul li {
+  width: 40%;
+  padding-block: 0.3rem;
+  font-size: 1.5rem;
+  list-style-type: none;
+}
+.main.container .container:not(#home) div ul li::before {
+  content: "⮚";
+  padding-right: 5px;
+  color: rgba(194, 116, 36, 0.66);
+}
+.main.container #home {
+  position: relative;
+}
+.main.container #home .foreground {
+  box-sizing: content-box;
+  height: 90%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  align-items: center;
+}
+.main.container #home .foreground div {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  gap: 0.5rem;
+  height: 100%;
+}
+.main.container #home .foreground div:nth-child(1) {
+  margin-bottom: -15rem;
+}
+.main.container #home .foreground div:nth-child(1) h1 {
+  text-align: end;
+}
+.main.container #home .foreground div:nth-child(2) {
+  margin-top: -25rem;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+.main.container #home .foreground div h1 {
+  padding: 0;
+  margin: 0;
+  font-size: 2rem;
+}
+.main.container #home .foreground div h1 span {
+  color: rgba(194, 116, 36, 0.66);
+}
+.main.container #home .background_image {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin-bottom: 10rem;
+  object-fit: contain;
+  z-index: -1;
+}
+.main.container #home .background_image div {
+  width: 60vw;
+  height: 60vh;
+  background: radial-gradient(rgba(255, 255, 255, 0) 20%, #13141D, #13141D);
+  position: absolute;
+}
+.main.container #home .background_image img {
+  width: 60vw;
+  height: 60vh;
+}
+.main.container #home .scroll {
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-4rem) rotate(-90deg);
+  text-decoration: none;
+}
+.main.container #home .scroll div {
+  border: 1px solid #C27424;
+  padding-bottom: 1.4rem;
+  padding-inline: 1.4rem;
+  border-radius: 40%;
+}
+.main.container #home .scroll div span {
+  color: #C27424;
+  font-size: 4rem;
+  text-align: center;
+}
+.main.container #about-me div {
+  width: 60%;
+}
+.main.container #projects .carousel {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.main.container #projects .carousel .info a {
+  font-size: 1.2rem;
+}
+.main.container #projects .carousel .info p {
+  padding-block: 0.2rem;
+  margin: 0;
+}
+.main.container #projects .carousel .nav {
+  display: flex;
+  flex-direction: column;
+}
+.main.container #projects .carousel .nav label {
+  cursor: pointer;
+  background: none;
+  color: rgba(255, 255, 255, 0.76);
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  box-sizing: border-box;
+  font-family: "Bubbler One", sans-serif;
+  text-align: end;
+  padding: 0;
+  margin: 0;
+}
+.main.container #projects .carousel .nav label input {
+  opacity: 0;
+}
+.main.container #projects .carousel .nav label input:checked + li {
+  border-right: 2px solid #C27424;
+}
+.main.container #projects .carousel .nav label li {
+  list-style-type: none;
+  font-size: 1.5rem;
+  padding: 1rem;
+  margin: 0;
+  border-right: 2px solid rgba(194, 116, 36, 0.2039215686);
+  transition: border-right-color 0.2s linear;
+}
+.main.container #playground div, .main.container #contact div {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.main.container #playground div .controls, .main.container #contact div .controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.main.container #playground div .controls a, .main.container #contact div .controls a {
+  padding-block: 0.5rem;
+  padding-inline: 3rem;
+  font-size: 3rem;
+  font-family: "Bubbler One", sans-serif;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  background: rgba(194, 116, 36, 0.41);
+  outline: 2px solid #C27424;
+  color: rgba(255, 255, 255, 0.76);
+}
+.main.container #playground div .controls a:hover, .main.container #contact div .controls a:hover {
+  background: rgba(194, 116, 36, 0.66);
+}
+
+@media screen and (max-width: 1250px) {
+  .main.container .container {
+    width: 100%;
+  }
+  .main.container .container:not(#home) {
+    padding-inline: 5rem;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .main.container .container#home .background_image img, .main.container .container#home .background_image div {
+    width: 100vw;
+  }
+  .main.container .container:not(#home) {
+    padding-block: 5rem;
+  }
+  .main.container .container:not(#home) div {
+    padding-inline: 0;
+  }
+  .main.container .container:not(#home) div ul li {
+    font-size: 1rem;
+  }
+  .main.container #about-me div {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .main.container .container:not(#home) {
+    padding-inline: 2rem;
+    padding-block: 3rem;
+  }
+}
+.main.container .contact.container {
+  width: 80%;
+}
+.main.container .contact.container form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.main.container .contact.container form div {
+  padding: 0 !important;
+}
+.main.container .contact.container form .Type {
+  width: 50%;
+  position: relative;
+}
+.main.container .contact.container form .Type button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.main.container .contact.container form .Type .dropdown {
+  position: absolute;
+  width: 100%;
+  outline: 1px solid rgba(255, 255, 255, 0.5);
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  transition: height 0.4s ease-in-out;
+  height: 0;
+  background: #13141D;
+  overflow: hidden;
+}
+.main.container .contact.container form .Type .dropdown.active {
+  height: 9.2rem;
+}
+.main.container .contact.container form .Type .dropdown button {
+  padding-block: 0.7rem;
+}
+.main.container .contact.container form .row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 1rem;
+}
+.main.container .contact.container form .row._2 h2 {
+  width: auto !important;
+  padding-inline: 1rem;
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+.main.container .contact.container form .row._2 a {
+  text-align: center;
+}
+.main.container .contact.container form .row._2 a:hover {
+  background-color: rgba(255, 255, 255, 0.1294117647);
+}
+.main.container .contact.container form label {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+.main.container .contact.container form textarea {
+  height: 10rem;
+  resize: vertical;
+}
+.main.container .contact.container form button:hover {
+  background: rgba(255, 255, 255, 0.1294117647) !important;
+}
+.main.container .contact.container form button:active {
+  background: rgba(255, 255, 255, 0.07);
+}
+.main.container .contact.container form input, .main.container .contact.container form textarea, .main.container .contact.container form button, .main.container .contact.container form h2, .main.container .contact.container form a, .main.container .contact.container form select {
+  background: rgba(255, 255, 255, 0.07);
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  margin: 0;
+  width: 100%;
+  padding: 0.6rem;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  caret-color: rgba(255, 255, 255, 0.76) !important;
+  color: rgba(255, 255, 255, 0.76) !important;
+}
+
+@media screen and (max-width: 600px) {
+  .main.container .contact.container form .row {
+    flex-direction: column;
+  }
+}
+.main.container .error.container * {
+  color: rgba(255, 255, 255, 0.76);
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+}
+.main.container .error.container a {
+  font-size: 1.4rem;
+}
+.main.container .error.container .log {
+  height: 15rem;
+  width: 70%;
+  padding-block: 0.8rem;
+}
+.main.container .error.container .code {
+  padding: 0;
+  margin: 0;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.5);
+}
+.main.container .error.container .code span {
+  font-style: normal;
+  font-weight: 600;
+}
+
 @keyframes bubble {
   0% {
     transform: translate(0);
@@ -382,12 +554,12 @@ nav div .resume:hover h1 {
 #button {
   outline: #C27424;
   background-color: rgba(194, 116, 36, 0.2039215686);
-  color: #FFFFFF;
+  color: rgba(255, 255, 255, 0.76);
 }
 
 :root {
   background-color: #13141D;
-  color: #FFFFFF;
+  color: rgba(255, 255, 255, 0.76);
   width: 100vw;
   justify-content: center;
   min-height: 100vh;
@@ -428,20 +600,29 @@ nav div .resume:hover h1 {
   border: none;
   background: rgba(194, 116, 36, 0.41);
   outline: 2px solid #C27424;
-  color: #FFFFFF;
+  color: rgba(255, 255, 255, 0.76);
 }
 :root button:hover {
   background: rgba(194, 116, 36, 0.66);
 }
 :root a {
-  color: #FFFFFF;
+  color: rgba(255, 255, 255, 0.76);
   font-family: "Open Sans", sans-serif;
+}
+:root .error {
+  color: darkred;
+  font-weight: 600;
+}
+:root .log {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 body {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin: 0;
+  padding: 0;
 }
 body #root {
   max-width: 1800px;
@@ -469,6 +650,20 @@ body #root {
   padding-right: 1rem;
   transform: rotate(90deg) translate(-50%);
   right: 0;
+}
+
+@media screen and (max-width: 1000px) {
+  .showScroll div:nth-child(1) {
+    left: -5rem;
+  }
+  .showScroll div:nth-child(2) {
+    right: -5rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  h1.background_text {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
