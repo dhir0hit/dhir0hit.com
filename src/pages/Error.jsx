@@ -1,6 +1,6 @@
 import {useLocation} from "react-router-dom";
 
-const Error = (props: any) => {
+const Error = (props) => {
   let location = useLocation();
   return <div className={"main container"}>
     <div className={"error container"}>

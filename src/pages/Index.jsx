@@ -1,11 +1,11 @@
 import { useState } from 'react'
 
 // Importing pages
-import _Home from "./_Home";
-import _AboutMe from "./_AboutMe";
-import _Projects from "./_Projects";
-import _Playground from "./_Playground";
-import _Contact from "./_Contact";
+import _Home from "./_Home.jsx";
+import _AboutMe from "./_AboutMe.jsx";
+import _Projects from "./_Projects.jsx";
+import _Playground from "./_Playground.jsx";
+import _Contact from "./_Contact.jsx";
 
 function Index() {
   const [count, setCount] = useState(0);

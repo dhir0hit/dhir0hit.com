@@ -1,5 +1,5 @@
 // Importing _Projects
-import { default as ProjectDao } from "../utils/Projects";
+import { default as ProjectDao } from "../utils/Projects.jsx";
 import React, {useEffect, useMemo, useRef, useState} from "react";
 
 const _Projects = () => {
@@ -36,14 +36,15 @@ const _Projects = () => {
 
 
 /*TODO: change max width of containers*/
-const CarouselNav = (props:any) => {
-    let _list: object[] = [];
+const CarouselNav = (props) => {
+    let _list = [];
     for (const Element in ProjectDao) {
         _list.push(
             <label
                 key={Element}
                 onClick={() => {
                     props.setProject(() => {
+                        // @ts-ignore
                         return ProjectDao[Element];
                     })
                 }}>
