@@ -3,6 +3,24 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "main": "src/main.jsx",
+  "module": "src/main.js",
+  ".": {
+    "import": "src/main.js",
+    "require": "src/main.jsx"
+  },
+  "./contact": {
+  "import": "src/pages/Contact.js",
+  "require": "src/pages/Contact.jsx"
+  },
+  "./error": {
+    "import": "src/pages/Error.js",
+    "require": "src/pages/Error.jsx"
+  },
+  "./playground": {
+    "import": "src/pages/Playgrounf.js",
+    "require": "src/pages/Playground.jsx"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
